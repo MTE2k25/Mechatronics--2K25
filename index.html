@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechatronics Department Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#08111f;
+--card:rgba(255,255,255,.05);
+--primary:#00e5ff;
+--secondary:#2979ff;
+--text:#eaf4ff;
+}
+
+body{
+font-family:'Orbitron',sans-serif;
+background:
+radial-gradient(circle at top right,#0d47a1 0%,transparent 35%),
+radial-gradient(circle at bottom left,#00e5ff22 0%,transparent 35%),
+#08111f;
+color:var(--text);
+overflow-x:hidden;
+}
+
+/* Animated Grid */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(0,229,255,.06) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,229,255,.06) 1px, transparent 1px);
+background-size:40px 40px;
+pointer-events:none;
+z-index:-1;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+.hero h2{
+font-size:1rem;
+color:var(--primary);
+text-shadow:
+0 0 5px #ff0000,
+0 0 1px #991a90,
+0 0 10px #10a760;
+}
+
+.hero h3{
+font-size:2rem;
+color:var(--primary);
+text-shadow:
+0 0 5px #00e5ff,
+0 0 1px #00e5ff,
+0 0 10px #00e5ff;
+}
+
+.hero p{
+margin-top:20px;
+font-size:1.2rem;
+max-width:700px;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 30px;
+border:1px solid var(--primary);
+background:transparent;
+color:var(--primary);
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--primary);
+color:#000;
+box-shadow:0 0 25px var(--primary);
+}
+
+/* ROBOTICS BAR */
+
+.robot-bar{
+margin-top:40px;
+padding:15px 25px;
+border:1px solid var(--primary);
+box-shadow:0 0 20px rgba(0,229,255,.2);
+border-radius:10px;
+}
+
+/* SECTION */
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:var(--primary);
+}
+
+/* NOTICES */
+
+.notice-grid{
+display:grid;
+gap:20px;
+}
+
+.notice{
+background:var(--card);
+backdrop-filter:blur(10px);
+padding:25px;
+border:1px solid rgba(0,229,255,.2);
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,229,255,.08);
+}
+
+/* MEMBERS */
+
+.member-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.member{
+background:var(--card);
+border:1px solid rgba(0,229,255,.2);
+border-radius:15px;
+overflow:hidden;
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+.member:hover{
+transform:translateY(-8px);
+box-shadow:
+0 0 20px #00e5ff55,
+0 0 40px #00e5ff22;
+}
+
+.member img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.member-info{
+padding:20px;
+}
+
+.member h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid rgba(0,229,255,.2);
+}
+
+/* GEAR */
+
+.gear{
+position:absolute;
+font-size:80px;
+opacity:.08;
+animation:spin 15s linear infinite;
+}
+
+.gear1{
+top:10%;
+left:5%;
+}
+
+.gear2{
+bottom:10%;
+right:5%;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="gear gear1">⚙️</div>
+<div class="gear gear2">⚙️</div>
+
+<section class="hero">
+    <img src="Logo_KUET.svg.png" width="100" height="100">
+    <h2>KHULNA UNIVERSITY OF ENGINEERING AND TECHNOLOGY</h1>
+
+<h3>MECHATRONICS ENGINEERING</h3>
+
+<p>
+Robotics • Automation • Artificial Intelligence • Embedded Systems
+</p>
+
+<div class="hero-buttons">
+<a href="#members" class="btn">Meet with Faculty Fighters</a>
+<a href="#notice" class="btn">Notice Board</a>
+</div>
+
+<div class="robot-bar">
+🤖 Autonomous Systems | ⚙️ Robotics | 🦾 Smart Manufacturing | 🔷 AI Integration
+</div>
+
+</section>
+
+<section id="notice">
+
+<h2 class="section-title">NOTICE BOARD</h2>
+
+<div class="notice-grid">
+
+<div class="notice">
+<a href="https://drive.google.com/file/d/1XkwZnDmww9u0I7Gcfyzyq1wUmHJBXQix/view"><h3>Orientation Notice for 2025-26</h3></a>
+<p>Date: 25 June</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<section id="members">
+
+<h2 class="section-title">Faculty Fighters = 30</h2>
+
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="member-grid">
+
+<!-- Duplicate this block 30 times -->
+<div class="member">
+ <div class="container">
+    <img src="IMG_20260411_175234.jpg" style="float: right; width:200px; margin-left: 15px;">
+</div>
+    
+
+
+<div class="member-info">
+<h3>Name: </h3>
+<br>
+<p>Roll: </p>
+<br>
+<p>Status: </p>
+<br>
+ <a href="https://www.facebook.com/share/1EVt49Fkwa/"><p>FB Link</p></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+⚙️ Mechatronics Department 2k25 Portal • Future Powered by Robotics
+</footer>
+
+</body>
+</html>
